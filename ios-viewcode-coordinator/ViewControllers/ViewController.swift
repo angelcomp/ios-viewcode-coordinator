@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         return element
     }()
     
+    var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +37,7 @@ class ViewController: UIViewController {
     }
     
     @objc private func didTapButton(_ sender: UIButton) {
-        print("vc button tapped")
+        coordinator?.goToSecondViewController()
     }
     
     private func setupViews() {
