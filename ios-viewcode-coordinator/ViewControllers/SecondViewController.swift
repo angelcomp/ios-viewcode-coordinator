@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  ios-viewcode-coordinator
 //
 //  Created by Angelica dos Santos on 01/11/22.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class SecondViewController: UIViewController {
+
     private var vcTitle: UILabel = {
         let element = UILabel()
-        element.text = "View Controller Screen"
+        element.text = "Second View Controller Screen"
         element.textColor = .black
         element.translatesAutoresizingMaskIntoConstraints = false
         return element
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     private var button: UIButton = {
         let element = UIButton()
-        element.setTitle("Tap me", for: .normal)
+        element.setTitle("Go to View Controller", for: .normal)
         element.backgroundColor = .systemBlue
         element.setTitleColor(.white, for: .normal)
         element.translatesAutoresizingMaskIntoConstraints = false
@@ -35,12 +35,12 @@ class ViewController: UIViewController {
     }
     
     @objc private func didTapButton(_ sender: UIButton) {
-        print("vc button tapped")
+        print("second vc button tapped")
     }
     
     private func setupViews() {
         
-        view.backgroundColor = .yellow
+        view.backgroundColor = .orange
         
         view.addSubview(vcTitle)
         view.addSubview(button)
@@ -51,8 +51,8 @@ class ViewController: UIViewController {
             
             button.topAnchor.constraint(equalTo: vcTitle.bottomAnchor, constant: 30),
             button.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            button.widthAnchor.constraint(equalToConstant: 100)
+            button.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
-}
 
+}
